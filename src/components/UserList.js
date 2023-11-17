@@ -174,7 +174,7 @@ const UserList = () => {
         });
     };
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-10 overflow-hidden">
             <h1 className="text-3xl font-bold underline mb-4">User List</h1>
             <div className="mb-4  flex flex-col md:gap-4 md:flex-row">
                 <input
@@ -235,7 +235,7 @@ const UserList = () => {
                 )}
             </div>
 
-            <div className=" relative flex flex-wrap gap-2">
+            <div className="md:left-[60%] md:transform md:-translate-x-1/2  relative flex flex-wrap gap-2 ">
                 {filteredUsers.map((user) => (
                     <UserCard
                         key={user._id}

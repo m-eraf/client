@@ -1,7 +1,6 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "https://userss-btmg.onrender.com/ ",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -45,3 +44,5 @@
     "tailwindcss": "^3.3.5"
   }
 }
+
+

@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://user-management-5wxy.onrender.com/",
+  "proxy": "https://userss-btmg.onrender.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

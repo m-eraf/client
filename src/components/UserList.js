@@ -23,7 +23,7 @@ const UserList = () => {
 
     const fetchTeamList = async () => {
         try {
-            const response = await axios.get('https://userss-btmg.onrender.com/team/api/teams');
+            const response = await axios.get(' team/api/teams');
             setTeamList(response.data);
         } catch (error) {
             console.error('Error fetching team list', error);
@@ -44,7 +44,7 @@ const UserList = () => {
         const fetchUsers = async () => {
             try {
                 const response = await axios.get(
-                    `https://userss-btmg.onrender.com/api/users?page=${currentPage}&search=${searchQuery}&domain=${domainFilter}&gender=${genderFilter}&availability=${availabilityFilter}`
+                    ` api/users?page=${currentPage}&search=${searchQuery}&domain=${domainFilter}&gender=${genderFilter}&availability=${availabilityFilter}`
                 );
                 setFilteredUsers(response.data);
             } catch (error) {
@@ -58,7 +58,7 @@ const UserList = () => {
     const fetchFilteredUsers = async () => {
         try {
             const response = await axios.get(
-                `https://userss-btmg.onrender.com/api/users?page=${currentPage}&search=${searchQuery}&domain=${domainFilter}&gender=${genderFilter}&availability=${availabilityFilter}`
+                ` api/users?page=${currentPage}&search=${searchQuery}&domain=${domainFilter}&gender=${genderFilter}&availability=${availabilityFilter}`
             );
             setFilteredUsers(response.data);
         } catch (error) {
@@ -87,7 +87,7 @@ const UserList = () => {
 
     const handleUpdateFormSubmit = async (updatedUser) => {
         try {
-            await axios.put(`https://userss-btmg.onrender.com/api/users/${updatedUser._id}`, updatedUser);
+            await axios.put(` api/users/${updatedUser._id}`, updatedUser);
             setUpdateFormVisible(false);
             fetchFilteredUsers();
             toast.success('User updated successfully');
@@ -100,7 +100,7 @@ const UserList = () => {
 
     const handleDeleteUser = async (userId) => {
         try {
-            await axios.delete(`https://userss-btmg.onrender.com/api/users/${userId}`);
+            await axios.delete(` api/users/${userId}`);
             fetchFilteredUsers();
             toast.success('User deleted successfully');
         } catch (error) {
@@ -140,7 +140,7 @@ const UserList = () => {
 
     const handleAddUser = async (newUser) => {
         try {
-            await axios.post('https://userss-btmg.onrender.com/api/users', newUser);
+            await axios.post(' api/users', newUser);
             setAddUserFormVisible(false);
             toast.success('User added successfully');
         } catch (error) {
@@ -151,7 +151,7 @@ const UserList = () => {
 
     const handleCreateTeam = async (teamName, selectedUsers) => {
         try {
-            const response = await axios.post('https://userss-btmg.onrender.com/team/api/team', { teamName, selectedUsers });
+            const response = await axios.post(' team/api/team', { teamName, selectedUsers });
             console.log('New team created:', response.data);
             setCreateTeamFormVisible(false);
             toast.success('Team created successfully');
